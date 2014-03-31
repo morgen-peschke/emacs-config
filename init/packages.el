@@ -20,42 +20,12 @@
 (el-get 'sync mpeschke/packages/el-get-package-list)
 
 ;;|====================================
-;;| package.el
+;;| Cask package management
 ;;|
 
-;; add MELPA to the repositories
-(require 'package)
-(package-initialize)
-(package-refresh-contents)
-
-(add-to-list 'package-archives
-             '("melpa" . "http://melpa.milkbox.net/packages/") t)
-(add-to-list 'package-archives
-             '("org" . "http://orgmode.org/elpa/") t)
-
-(setq mpeschke/packages/package-list
-      '(enh-ruby-mode
-        json-mode
-        lua-mode
-        markdown-mode
-        org
-        rinari
-        yaml-mode
-
-        ansi-color ;; Ansi color in compilation buffer
-        jump-char
-        ido
-        ))
-
-(defun mpeschke/packages/install (p)
-  (when (not (package-installed-p p))
-    (package-install p)
-  ))
-
-(add-hook 'after-init-hook (lambda ()
-                             (mapc (lambda (p) (mpeschke/packages/install p))
-                                   mpeschke/packages/package-list)
-                             ))
+(require 'cask "/usr/local/Cellar/cask/0.5.2/cask.el")
+(cask-initialize)
+(require 'pallet)
 
 ;;|====================================
 ;;| Manually installed packages

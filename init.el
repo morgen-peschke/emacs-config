@@ -6,25 +6,22 @@
 
 ;; The rest of the config is here, so that the package management system will be
 ;; up when they are initialized.
-(add-hook 'after-init-hook
-          (lambda ()
-            (load-file "~/.emacs.d/init/custom-functions.el")
-            (load-file "~/.emacs.d/init/variable-and-function-calls.el")
-            (load-file "~/.emacs.d/init/completion.el")
-            (load-file "~/.emacs.d/init/hooks.el")
-            (load-file "~/.emacs.d/init/keybindings.el")
-            (load-file "~/.emacs.d/init/auto-detect.el")
-            (load-file "~/.emacs.d/init/server.el")
+(load-file "~/.emacs.d/init/custom-functions.el")
+(load-file "~/.emacs.d/init/variable-and-function-calls.el")
+(load-file "~/.emacs.d/init/completion.el")
+(load-file "~/.emacs.d/init/hooks.el")
+(load-file "~/.emacs.d/init/keybindings.el")
+(load-file "~/.emacs.d/init/auto-detect.el")
+(load-file "~/.emacs.d/init/server.el")
 
-            ;; Library configurations
-            (load-file "~/.emacs.d/config/align.el")
-            (load-file "~/.emacs.d/config/php.el")
-            (load-file "~/.emacs.d/config/rinari.el")
-            (load-file "~/.emacs.d/config/mumamo.el")
-            (load-file "~/.emacs.d/config/imenu.el")
-            (load-file "~/.emacs.d/config/enh-ruby-mode.el")
-            (load-file "~/.emacs.d/config/outline-minor-mode.el")
-            ))
+;; Library configurations
+(load-file "~/.emacs.d/config/align.el")
+(load-file "~/.emacs.d/config/php.el")
+(load-file "~/.emacs.d/config/rinari.el")
+(load-file "~/.emacs.d/config/mumamo.el")
+(load-file "~/.emacs.d/config/imenu.el")
+(load-file "~/.emacs.d/config/enh-ruby-mode.el")
+(load-file "~/.emacs.d/config/outline-minor-mode.el")
 
 ;; Customize Variables
 (custom-set-variables
