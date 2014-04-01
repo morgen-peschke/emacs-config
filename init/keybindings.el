@@ -3,20 +3,20 @@
 ;;|
 
 (defun mpeschke/comment-blocks/c-style-bindings ()
-  (local-set-key (kbd "C-c b") 'comment-block-c)
-  (local-set-key (kbd "C-c s") 'comment-block-c-small)
-  (local-set-key (kbd "C-c B") 'comment-block-c-section)
-  (local-set-key (kbd "C-c c") 'comment-block-c-critical)
+  (local-set-key (kbd "C-c b") 'mpeschke/comment-block-c)
+  (local-set-key (kbd "C-c s") 'mpeschke/comment-block-c-small)
+  (local-set-key (kbd "C-c B") 'mpeschke/comment-block-c-section)
+  (local-set-key (kbd "C-c c") 'mpeschke/comment-block-c-critical)
   )
 
 (defun mpeschke/comment-blocks/shell-style-bindings ()
-  (local-set-key (kbd "C-c b") 'comment-block-shell)
-  (local-set-key (kbd "C-c B") 'comment-block-shell-section)
+  (local-set-key (kbd "C-c b") 'mpeschke/comment-block-shell)
+  (local-set-key (kbd "C-c B") 'mpeschke/comment-block-shell-section)
   )
 
 (defun mpeschke/comment-blocks/lisp-style-bindings ()
-  (local-set-key (kbd "C-c b") 'comment-block-lisp)
-  (local-set-key (kbd "C-c B") 'comment-block-lisp-section)
+  (local-set-key (kbd "C-c b") 'mpeschke/comment-block-lisp)
+  (local-set-key (kbd "C-c B") 'mpeschke/comment-block-lisp-section)
   )
 
 (mapc (lambda (mode-hook) (add-hook mode-hook 'mpeschke/comment-blocks/c-style-bindings))
@@ -76,12 +76,18 @@
 (global-set-key (kbd "C-c i"  ) 'iedit-mode)
 (global-set-key (kbd "C-x r e") 'iedit-rectangle-mode)
 
-;; Misc overrides
+;;|=======================================
+;;| Other keybindings
+;;|
+
+;; Overrides
 (global-set-key (kbd "C-a") 'mpeschke/better-move-beginning-of-line)
 (global-set-key (kbd "C-n") 'goto-line)
-(global-set-key (kbd "C-z") 'zoom)
 
-(global-set-key (kbd "S-<tab>") 'hippie-expand)       ;; Autocomplete
+;; Misc
+(global-set-key (kbd "C-z") 'zoom)
+(global-set-key (kbd "S-<tab>") 'auto-complete)
+(global-set-key (kbd "C-<tab>") 'er/expand-region)
 
 ;; Adds expansion to lisp evals in the minibuffers
 (define-key read-expression-map [(tab)] 'hippie-expand)

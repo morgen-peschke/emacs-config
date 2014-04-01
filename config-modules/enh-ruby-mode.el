@@ -41,6 +41,14 @@
 	(insert "{" )))))
 
 ;;|=======================================
+;;| Variable settings
+;;|
+(add-to-list 'interpreter-mode-alist '("ruby" . enh-ruby-mode))
+(setq
+ enh-ruby-bounce-deep-indent         t
+ enh-ruby-hanging-brace-indent-level 2
+ )
+;;|=======================================
 ;;| Mode Hooks
 ;;|
 

@@ -4,24 +4,15 @@
 ;; Global settings
 (load-file "~/.emacs.d/init/packages.el")
 
-;; The rest of the config is here, so that the package management system will be
-;; up when they are initialized.
+;; These are loaded here explicitly as the order matters somewhat
 (load-file "~/.emacs.d/init/custom-functions.el")
 (load-file "~/.emacs.d/init/variable-and-function-calls.el")
 (load-file "~/.emacs.d/init/completion.el")
 (load-file "~/.emacs.d/init/hooks.el")
 (load-file "~/.emacs.d/init/keybindings.el")
-(load-file "~/.emacs.d/init/auto-detect.el")
 (load-file "~/.emacs.d/init/server.el")
 
-;; Library configurations
-(load-file "~/.emacs.d/config/align.el")
-(load-file "~/.emacs.d/config/php.el")
-(load-file "~/.emacs.d/config/rinari.el")
-(load-file "~/.emacs.d/config/mumamo.el")
-(load-file "~/.emacs.d/config/imenu.el")
-(load-file "~/.emacs.d/config/enh-ruby-mode.el")
-(load-file "~/.emacs.d/config/outline-minor-mode.el")
+;; Library configurations will be loaded from ~/.emacs.d/config-modules, as the order doesn't really matter
 
 ;; Customize Variables
 (custom-set-variables
@@ -38,6 +29,7 @@
  '(hippie-expand-verbose nil)
  '(ispell-query-replace-choices t)
  '(js-indent-level 2)
+ '(load-dirs "~/.emacs.d/config-modules")
  '(lua-indent-level 2)
  '(mumamo-background-colors nil)
  '(mumamo-chunk-coloring 0)

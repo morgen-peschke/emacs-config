@@ -14,7 +14,6 @@
 
 (setq mpeschke/packages/el-get-package-list
       '(nxhtml
-        iedit
         ))
 
 (el-get 'sync mpeschke/packages/el-get-package-list)

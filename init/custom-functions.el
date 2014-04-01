@@ -175,6 +175,13 @@
   (interactive (list (read-shell-command "Shell command: ")))
   (shell-command (concat "~/bin/eval-alias " cmd) current-prefix-arg))
 
+;; Shell command to string (comment in http://stackoverflow.com/a/5020475)
+;;;###autoload
+(defun mpeschke/shell-command-to-string (&rest cmd)
+  (replace-regexp-in-string "\r?\n$" ""
+                            (shell-command-to-string
+                             (mapconcat 'identity cmd " "))))
+
 ;;|=======================================
 ;;| Miscellaneous
 ;;|
