@@ -219,10 +219,18 @@
 (defun mpeschke/insert-file-name (p)
   (interactive "P")
   (if p
-      (insert buffer-file-name)
-    (insert (file-relative-name buffer-file-name))
+      (insert (buffer-file-name (mpeschke/current-buffer)))
+    (insert (file-relative-name (buffer-file-name (mpeschke/current-buffer))))
     )
   )
+
+;; http://stackoverflow.com/questions/455345/in-emacs-how-to-insert-file-name-in-shell-command
+(defun mpeschke/current-buffer ()
+  "Return current-buffer if current buffer is not the *mini-buffer*
+  else return buffer before minibuf is activated."
+  (if (not (window-minibuffer-p)) (current-buffer)
+      (if (eq (get-lru-window) (next-window))
+    	  (window-buffer (previous-window)) (window-buffer (next-window)))))
 
 ;; Current buffer mode
 ;;;###autoload

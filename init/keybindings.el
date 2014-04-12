@@ -47,9 +47,9 @@
 (define-key mpeschke/global-map (kbd "d"  ) 'dedosify)
 (define-key mpeschke/global-map (kbd "M-m") 'kill-compilation)
 (define-key mpeschke/global-map (kbd "m"  ) 'compile)
-(define-key mpeschke/global-map (kbd "M-q") 'unfill-paragraph)
+(define-key mpeschke/global-map (kbd "M-q") 'mpeschke/unfill-paragraph)
 (define-key mpeschke/global-map (kbd "c"  ) 'comment-or-uncomment-region)
-(define-key mpeschke/global-map (kbd "|"  ) 'toggle-windows-split)
+(define-key mpeschke/global-map (kbd "|"  ) 'mpeschke/toggle-windows-split)
 
 (define-key mpeschke/global-map (kbd "a") 'mpeschke/align-map)
 (define-key mpeschke/global-map (kbd "i") 'mpeschke/insert-map)
@@ -89,12 +89,19 @@
 (global-set-key (kbd "S-<tab>") 'auto-complete)
 (global-set-key (kbd "C-<tab>") 'er/expand-region)
 
-;; Adds expansion to lisp evals in the minibuffers
-(define-key read-expression-map [(tab)] 'hippie-expand)
-
 ;; Bindings for the improved zap-to-char
 (global-set-key [(meta m)]       'jump-char-forward)
 (global-set-key [(shift meta m)] 'jump-char-backward)
+
+;;|=======================================
+;;| Mini-buffer key-bindings
+;;|
+
+;; Adds expansion to lisp evals in the minibuffers
+(define-key read-expression-map [(tab)] 'hippie-expand)
+
+;; Mini-buffer insert menu
+(define-key minibuffer-local-map "\e\e" 'mpeschke/insert-map)
 
 ;;|=======================================
 ;;| Changes I liked from:
