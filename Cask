@@ -33,3 +33,4 @@
 (depends-on "highlight-indentation")
 (depends-on "web-mode")
 (depends-on "expand-region")
+(depends-on "csv-mode")
