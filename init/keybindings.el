@@ -85,7 +85,7 @@
 (global-set-key (kbd "C-n") 'goto-line)
 
 ;; Misc
-(global-set-key (kbd "C-z") 'zoom)
+(global-set-key (kbd "C-z") 'mpeschke/zoom)
 (global-set-key (kbd "S-<tab>") 'auto-complete)
 (global-set-key (kbd "C-<tab>") 'er/expand-region)
 
