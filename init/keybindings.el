@@ -40,16 +40,18 @@
 ;;|
 
 ;; My global prefix command ESC ESC
-(define-prefix-command 'mpeschke/global-map nil "My Commands [d]edosify co[m]pile [M-q]:unfill [c]omment [|]toggle_split_window [a]lign(sub-menu) [i]nsert(sub-menu)")
+(define-prefix-command 'mpeschke/global-map nil "My Commands [d]ash-at-point [D]edosify co[m]pile [M]:kill-compilation [Q]:unfill [c]omment [|]toggle_split_window [o]ccur [a]lign(sub-menu) [i]nsert(sub-menu)")
 (global-set-key "\e\e" 'mpeschke/global-map)
 
 ;; Main commands
-(define-key mpeschke/global-map (kbd "d"  ) 'dedosify)
+(define-key mpeschke/global-map (kbd "d"  ) 'dash-at-point)
+(define-key mpeschke/global-map (kbd "D"  ) 'dedosify)
 (define-key mpeschke/global-map (kbd "M-m") 'kill-compilation)
 (define-key mpeschke/global-map (kbd "m"  ) 'compile)
-(define-key mpeschke/global-map (kbd "M-q") 'mpeschke/unfill-paragraph)
+(define-key mpeschke/global-map (kbd "Q"  ) 'mpeschke/unfill-paragraph)
 (define-key mpeschke/global-map (kbd "c"  ) 'comment-or-uncomment-region)
 (define-key mpeschke/global-map (kbd "|"  ) 'mpeschke/toggle-windows-split)
+(define-key mpeschke/global-map (kbd "o"  ) 'occur)
 
 (define-key mpeschke/global-map (kbd "a") 'mpeschke/align-map)
 (define-key mpeschke/global-map (kbd "i") 'mpeschke/insert-map)
