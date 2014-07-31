@@ -45,7 +45,6 @@
         js-mode-hook
         python-mode-hook
         sh-mode-hook
-        enh-ruby-mode-hook
         ))
 
 ;; Prevent auto-fill-mode in others
@@ -55,6 +54,7 @@
         html-mode-hook
         lisp-mode-hook
         sql-mode-hook
+        enh-ruby-mode-hook
         ))
 
 ;; Set toggle truncate lines in some modes

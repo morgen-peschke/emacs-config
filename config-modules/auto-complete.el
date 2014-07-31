@@ -22,4 +22,5 @@
         c-mode
         c++-mode
         html-mode
+        conf-space-mode
         ))

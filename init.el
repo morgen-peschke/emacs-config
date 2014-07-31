@@ -22,8 +22,6 @@
  ;; If there is more than one, they won't work right.
  '(align-text-modes (quote (text-mode outline-mode org-mode)))
  '(ansi-color-names-vector ["black" "#d55e00" "#009e73" "#f8ec59" "#0072b2" "#cc79a7" "#56b4e9" "white"])
- '(browse-url-browser-function (quote browse-url-generic))
- '(browse-url-generic-program "chromium")
  '(custom-enabled-themes (quote (deeper-blue)))
  '(hippie-expand-dabbrev-skip-space nil)
  '(hippie-expand-verbose nil)
