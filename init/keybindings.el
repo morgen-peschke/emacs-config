@@ -40,11 +40,10 @@
 ;;|
 
 ;; My global prefix command ESC ESC
-(define-prefix-command 'mpeschke/global-map nil "My Commands [d]ash-at-point [D]edosify co[m]pile [M]:kill-compilation [Q]:unfill [c]omment [|]toggle_split_window [o]ccur [a]lign(sub-menu) [i]nsert(sub-menu)")
+(define-prefix-command 'mpeschke/global-map nil "My Commands [D]edosify co[m]pile [M]:kill-compilation [Q]:unfill [c]omment [|]toggle_split_window [o]ccur [a]lign(sub-menu) [i]nsert(sub-menu)")
 (global-set-key "\e\e" 'mpeschke/global-map)
 
 ;; Main commands
-(define-key mpeschke/global-map (kbd "d"  ) 'dash-at-point)
 (define-key mpeschke/global-map (kbd "D"  ) 'dedosify)
 (define-key mpeschke/global-map (kbd "M-m") 'kill-compilation)
 (define-key mpeschke/global-map (kbd "m"  ) 'compile)

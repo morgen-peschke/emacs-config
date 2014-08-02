@@ -2,7 +2,6 @@
 (source gnu)
 
 (depends-on "cask")
-(depends-on "dash")
 (depends-on "enh-ruby-mode")
 (depends-on "epl")
 (depends-on "f")
@@ -31,7 +30,5 @@
 (depends-on "iedit")
 (depends-on "rainbow-mode")
 (depends-on "highlight-indentation")
-(depends-on "web-mode")
 (depends-on "expand-region")
 (depends-on "csv-mode")
-(depends-on "dash-at-point")
