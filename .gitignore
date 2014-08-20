@@ -5,3 +5,4 @@ el-get
 .cask
 *~
 lisp/nxhtml
+session.*
