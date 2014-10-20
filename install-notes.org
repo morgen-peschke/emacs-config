@@ -1,0 +1,7 @@
+** Fonts needed for Unicode font support
+ - http://users.teilar.gr/~g1951d/Symbola702.zip
+ - http://www.quivira-font.com/files/Quivira.ttf
+ - http://sourceforge.net/projects/dejavu/files/dejavu/2.33/dejavu-fonts-ttf-2.33.tar.bz2
+** With Cygwin
+   http://www.emacswiki.org/emacs/CygWin
+   Uncomment cask lines in init/package.el
