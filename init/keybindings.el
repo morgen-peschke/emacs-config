@@ -67,7 +67,7 @@
 ;; Insert sub-menu
 (define-prefix-command 'mpeschke/insert-map nil "[u]nicode [d]ate date[s]tamp [t]imestamp [f]ile")
 
-(define-key mpeschke/insert-map (kbd "i") 'ucs-insert)
+(define-key mpeschke/insert-map (kbd "u") 'insert-char)
 (define-key mpeschke/insert-map (kbd "d") 'mpeschke/insert-date)
 (define-key mpeschke/insert-map (kbd "s") 'mpeschke/insert-datestamp)
 (define-key mpeschke/insert-map (kbd "t") 'mpeschke/insert-timestamp)

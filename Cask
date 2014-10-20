@@ -32,3 +32,4 @@
 (depends-on "highlight-indentation")
 (depends-on "expand-region")
 (depends-on "csv-mode")
+(depends-on "unicode-fonts")
