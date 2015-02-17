@@ -40,7 +40,7 @@
 ;;|
 
 ;; My global prefix command ESC ESC
-(define-prefix-command 'mpeschke/global-map nil "My Commands [D]edosify co[m]pile [M]:kill-compilation [Q]:unfill [c]omment [|]toggle_split_window [o]ccur [a]lign(sub-menu) [i]nsert(sub-menu)")
+(define-prefix-command 'mpeschke/global-map nil "My Commands [D]edosify co[m]pile [M]:kill-compilation [Q]:unfill [c]omment [|]toggle_split_window [o]ccur [a]lign(sub-menu) [i]nsert(sub-menu) [=]calc")
 (global-set-key "\e\e" 'mpeschke/global-map)
 
 ;; Main commands
@@ -51,6 +51,7 @@
 (define-key mpeschke/global-map (kbd "c"  ) 'comment-or-uncomment-region)
 (define-key mpeschke/global-map (kbd "|"  ) 'mpeschke/toggle-windows-split)
 (define-key mpeschke/global-map (kbd "o"  ) 'occur)
+(define-key mpeschke/global-map (kbd "="  ) 'calc)
 
 (define-key mpeschke/global-map (kbd "a") 'mpeschke/align-map)
 (define-key mpeschke/global-map (kbd "i") 'mpeschke/insert-map)
