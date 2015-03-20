@@ -277,3 +277,10 @@ this command again."
       (text-scale-set -1)
     (text-scale-set 0)
     ))
+
+;; Copy entire buffer to kill ring
+;;;###autoload
+(defun mpeschke/kill-ring-save-buffer ()
+  "Copy entire buffer to kill ring"
+  (interactive)
+  (clipboard-kill-ring-save (point-min) (point-max)))
