@@ -33,3 +33,4 @@
 (depends-on "expand-region")
 (depends-on "csv-mode")
 (depends-on "unicode-fonts")
+(depends-on "vlf")
