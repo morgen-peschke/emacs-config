@@ -34,3 +34,4 @@
 (depends-on "csv-mode")
 (depends-on "unicode-fonts")
 (depends-on "vlf")
+(depends-on "ws-butler")

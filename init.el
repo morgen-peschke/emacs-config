@@ -2,6 +2,13 @@
 ;; (setq inhibit-default-init t)
 
 ;; Cygwin stuff (needs to be first to avoid issues (stuff that requires bash, etc)
+
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(package-initialize)
+
 (let* ((cygwin-root "c:/cygwin64")
        (cygwin-bin (concat cygwin-root "/bin")))
   (when (and (eq 'windows-nt system-type)
@@ -111,6 +118,7 @@
  '(vc-handled-backends (quote (RCS SVN Git)))
  '(vc-initial-comment t)
  '(vc-mistrust-permissions t)
+ '(ws-butler-global-mode t)
  '(visible-bell t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

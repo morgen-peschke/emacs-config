@@ -66,6 +66,3 @@
         sql-mode-hook
         js-mode-hook
         ))
-
-;; Delete trailing whitespace before save
-(add-hook 'before-save-hook 'delete-trailing-whitespace)
