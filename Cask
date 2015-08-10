@@ -34,3 +34,6 @@
 (depends-on "unicode-fonts")
 (depends-on "vlf")
 (depends-on "ws-butler")
+(depends-on "scala-mode2")
+(depends-on "sbt-mode")
+(depends-on "ensime")
