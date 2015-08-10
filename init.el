@@ -88,6 +88,9 @@
    (quote
     (("melpa" . "http://melpa.milkbox.net/packages/")
      ("gnu" . "http://elpa.gnu.org/packages/"))))
+ '(package-selected-packages
+   (quote
+    (yaml-mode ws-butler vlf unicode-fonts rinari rainbow-mode pallet markdown-mode lua-mode load-dir jump-char json-mode iedit highlight-indentation expand-region enh-ruby-mode csv-mode auto-complete ag)))
  '(pretty-symbol-categories (lambda relational logical nil))
  '(pretty-symbol-patterns
    (quote
@@ -122,8 +125,8 @@
  '(vc-handled-backends (quote (RCS SVN Git)))
  '(vc-initial-comment t)
  '(vc-mistrust-permissions t)
- '(ws-butler-global-mode t)
- '(visible-bell t))
+ '(visible-bell t)
+ '(ws-butler-global-mode t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
