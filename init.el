@@ -9,6 +9,7 @@
 ;; You may delete these explanatory comments.
 (package-initialize)
 
+;; Windows specific settings
 (let* ((cygwin-root "c:/cygwin64")
        (cygwin-bin (concat cygwin-root "/bin")))
   (when (and (eq 'windows-nt system-type)
@@ -38,6 +39,9 @@
 	ad-do-it))
     (ad-activate 'grep-compute-defaults)
     ))
+
+;; Add common alternate install path to exec-path (looking at you Homebrew!)
+(setq exec-path (append exec-path '("/usr/local/bin")))
 
 ;; Global settings
 (load-file "~/.emacs.d/init/packages.el")
