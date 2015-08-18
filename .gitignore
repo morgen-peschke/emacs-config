@@ -6,3 +6,5 @@ el-get
 *~
 lisp/nxhtml
 session.*
+ensime/
+ido.last
