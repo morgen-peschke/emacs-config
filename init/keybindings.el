@@ -39,6 +39,10 @@
 ;;| Global hooks
 ;;|
 
+;; Always use the Linux style Home/End keys
+(global-set-key (kbd "<home>") 'mpeschke/better-move-beginning-of-line)
+(global-set-key (kbd "<end>")  'move-end-of-line)
+
 ;; My global prefix command ESC ESC
 (define-prefix-command 'mpeschke/global-map nil "My Commands [D]edosify co[m]pile [M]:kill-compilation [Q]:unfill [c]omment [|]toggle_split_window [o]ccur [a]lign(sub-menu) [i]nsert(sub-menu) [=]calc")
 (global-set-key "\e\e" 'mpeschke/global-map)
