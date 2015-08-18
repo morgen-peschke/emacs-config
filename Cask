@@ -34,6 +34,7 @@
 (depends-on "unicode-fonts")
 (depends-on "vlf")
 (depends-on "ws-butler")
+(depends-on "git-commit")
 
 ;; Scala
 (depends-on "scala-outline-popup")
