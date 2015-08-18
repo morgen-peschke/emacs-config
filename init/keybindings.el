@@ -120,3 +120,12 @@
 ;; M-down and M-up do nothing! :(  Let's make them do something, like M-left and M-right do.
 (global-set-key [M-down] '(lambda () (interactive) (progn (forward-line 10)  (recenter) ) ))
 (global-set-key [M-up]   '(lambda () (interactive) (progn (forward-line -10) (recenter) ) ))
+
+;;|=======================================
+;;| Key translations for common Unicode
+;;| characters
+
+(define-key key-translation-map (kbd "C-c u <down>")  (kbd "↓"))
+(define-key key-translation-map (kbd "C-c u <up>")    (kbd "↑"))
+(define-key key-translation-map (kbd "C-c u <left>")  (kbd "←"))
+(define-key key-translation-map (kbd "C-c u <right>") (kbd "→"))
