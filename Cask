@@ -34,6 +34,14 @@
 (depends-on "unicode-fonts")
 (depends-on "vlf")
 (depends-on "ws-butler")
-(depends-on "scala-mode2")
-(depends-on "sbt-mode")
-(depends-on "ensime")
+
+;; Scala
+(depends-on "scala-outline-popup")
+(depends-on "scala-mode2") ; Ensime dependency
+(depends-on "sbt-mode")    ; Ensime dependency
+(depends-on "s")           ; Ensime dependency: elisp string manipulation
+(depends-on "dash")        ; Ensime dependency: elisp list API
+(depends-on "popup")       ; Ensime dependency: popup UI library
+(depends-on "dash-functional") ; Ensime dependency: dash function combinators
+(depends-on "auto-complete") ; Ensime dependency: auto-completion
+(depends-on "ensime" :git "https://github.com/ensime/ensime-emacs.git")
