@@ -35,6 +35,7 @@
 (depends-on "vlf")
 (depends-on "ws-butler")
 (depends-on "git-commit")
+(depends-on "column-enforce-mode")
 
 ;; Scala
 (depends-on "scala-outline-popup")
