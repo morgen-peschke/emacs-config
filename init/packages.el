@@ -39,3 +39,4 @@
 
 ;; Requires
 (require 'uniquify)   ;; Needed to avoid <#> buffer names
+(require 'git-commit) ;; Needed so that git commit messages will be recognized
