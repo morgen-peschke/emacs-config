@@ -57,7 +57,9 @@
 (tool-bar-mode        -1         ) ;; Hide the tool bar
 (column-number-mode    1         ) ;; Column numbers in mode line
 (line-number-mode      1         ) ;; Row numbers in mode line
-(global-linum-mode     1         ) ;; Display line numbers on side of frame
+(global-linum-mode     0         ) ;; Display line numbers on side of frame,
+                                   ;; cannot be enabled globally as it borks
+                                   ;; docview.
 (text-scale-set        0         ) ;; Set initial zoom level
 (fset 'yes-or-no-p     'y-or-n-p ) ;; uses y instead of yes
 (electric-pair-mode    t         ) ;; allows for matching "" and () and []

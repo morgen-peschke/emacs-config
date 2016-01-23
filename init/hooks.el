@@ -8,12 +8,14 @@
 (add-hook 'text-mode-hook
           '(lambda ()
              (auto-fill-mode 1)
+             (linum-mode 1)
              (set-fill-column 80)
              (flyspell-mode t)))
 
 (defun prog-mode-hooks ()
   (set-fill-column 80)
   (flyspell-prog-mode)
+  (linum-mode 1)
   (if (fboundp 'c-subword-mode)
       (c-subword-mode)
     (subword-mode))
