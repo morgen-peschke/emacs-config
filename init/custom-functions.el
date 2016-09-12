@@ -79,6 +79,25 @@
   "Inserts a pretty formatted date"  (interactive)
   (insert (format-time-string "%Y/%m/%d")))
 
+;;;###autoload
+(defun mpeschke/iso8601-to-unix-timestamp (iso-8601-string)
+  "Converts ISO 8601 string to Unix timestamps"
+  (format-time-string "%s" (parse-iso8601-time-string iso-8601-string)))
+
+;;;###autoload
+(defun mpeschke/unix-timestamp-to-iso8601 (timestamp)
+  "Converts a Unix timestamp to an ISO 8601 string"
+  (format-time-string "%Y-%m-%dT%T" timestamp))
+
+;;;###autoload
+(defun mpeschke/truncate-timestamp-to-start-of-day (timestamp)
+  "Truncates a Unix timestamp to the start of day in the local timezone"
+  (mpeschke/iso8601-to-unix-timestamp
+   (concat
+    (car (split-string (mpeschke/unix-timestamp-to-iso8601 timestamp) "T"))
+    "T"
+    "00:00:00")))
+
 ;;|=======================================
 ;;| Comment block - C/C++
 ;;|
