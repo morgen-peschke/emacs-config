@@ -119,6 +119,9 @@
      (8709 nil "\\<nil\\>"
            (emacs-lisp-mode inferior-lisp-mode inferior-emacs-lisp-mode lisp-mode scheme-mode ruby-mode)))))
  '(ruby-insert-encoding-magic-comment nil)
+ '(scala-indent:align-forms t)
+ '(scala-indent:align-parameters nil)
+ '(scala-indent:default-run-on-strategy 1)
  '(vc-checkout-carefully t)
  '(vc-command-messages t)
  '(vc-default-init-revision "0.1")
