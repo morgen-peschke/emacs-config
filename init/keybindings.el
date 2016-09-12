@@ -44,7 +44,7 @@
 (global-set-key (kbd "<end>")  'move-end-of-line)
 
 ;; My global prefix command ESC ESC
-(define-prefix-command 'mpeschke/global-map nil "My Commands [D]edosify co[m]pile [M]:kill-compilation [Q]:unfill [c]omment [|]toggle_split_window [o]ccur [a]lign(sub-menu) [i]nsert(sub-menu) [=]calc")
+(define-prefix-command 'mpeschke/global-map nil "[o]rg [D]edosify co[m]pile [M]:kill-compilation [Q]:unfill [c]omment [|]toggle_split_window [O]ccur [a]lign(sub-menu) [i]nsert(sub-menu) [=]calc")
 (global-set-key "\e\e" 'mpeschke/global-map)
 
 ;; Main commands
@@ -54,11 +54,19 @@
 (define-key mpeschke/global-map (kbd "Q"  ) 'mpeschke/unfill-paragraph)
 (define-key mpeschke/global-map (kbd "c"  ) 'comment-or-uncomment-region)
 (define-key mpeschke/global-map (kbd "|"  ) 'mpeschke/toggle-windows-split)
-(define-key mpeschke/global-map (kbd "o"  ) 'occur)
+(define-key mpeschke/global-map (kbd "M-o"  ) 'occur)
 (define-key mpeschke/global-map (kbd "="  ) 'calc)
 
+(define-key mpeschke/global-map (kbd "o") 'mpeschke/org-map)
 (define-key mpeschke/global-map (kbd "a") 'mpeschke/align-map)
 (define-key mpeschke/global-map (kbd "i") 'mpeschke/insert-map)
+
+;; Org-mode sub-menu
+(define-prefix-command 'mpeschke/org-map nil "clock-[i]n clock-[o]ut clock-[m]enu")
+
+(define-key mpeschke/org-map (kbd "i") 'org-clock-in)
+(define-key mpeschke/org-map (kbd "o") 'org-clock-out)
+(define-key mpeschke/org-map (kbd "m") 'org-clock-menu)
 
 ;; Align sub-menu
 (define-prefix-command 'mpeschke/align-map nil "[a]lign [c]urrent [t]ext [r]egex all-[s]trings")
