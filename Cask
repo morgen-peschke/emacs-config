@@ -36,6 +36,7 @@
 (depends-on "ws-butler")
 (depends-on "git-commit")
 (depends-on "column-enforce-mode")
+(depends-on "string-inflection")
 
 ;; Scala
 (depends-on "scala-outline-popup")
