@@ -62,11 +62,14 @@
 (define-key mpeschke/global-map (kbd "i") 'mpeschke/insert-map)
 
 ;; Org-mode sub-menu
-(define-prefix-command 'mpeschke/org-map nil "clock-[i]n clock-[o]ut clock-[m]enu")
+(define-prefix-command 'mpeschke/org-map nil "[c]locking-time")
+(define-key mpeschke/org-map (kbd "c") 'mpeschke/org-clock-map)
 
-(define-key mpeschke/org-map (kbd "i") 'org-clock-in)
-(define-key mpeschke/org-map (kbd "o") 'org-clock-out)
-(define-key mpeschke/org-map (kbd "m") 'org-clock-menu)
+(define-prefix-command 'mpeschke/org-clock-map nil "[i]n [o]ut [m]enu insert-[t]able")
+(define-key mpeschke/org-clock-map (kbd "i") 'org-clock-in)
+(define-key mpeschke/org-clock-map (kbd "o") 'org-clock-out)
+(define-key mpeschke/org-clock-map (kbd "m") 'org-clock-menu)
+(define-key mpeschke/org-clock-map (kbd "t") 'org-clock-report)
 
 ;; Align sub-menu
 (define-prefix-command 'mpeschke/align-map nil "[a]lign [c]urrent [t]ext [r]egex all-[s]trings")
