@@ -83,7 +83,9 @@
    (quote
     (org-bbdb org-bibtex org-jsinfo org-wl org-bookmark org-drill org-man)))
  '(org-todo-keyword-faces (quote (("WAIT" . org-agenda-dimmed-todo-face))))
- '(org-todo-keywords (quote ((sequence "WAIT(3)" "TODO(2)" "DONE(1)"))))
+ '(org-todo-keywords
+   (quote
+    ((sequence "TODO(d)" "WAIT(h)" "DOING(t)" "IN-REVIEW(n)" "DONE(s)"))))
  '(package-archives
    (quote
     (("melpa" . "http://melpa.milkbox.net/packages/")
