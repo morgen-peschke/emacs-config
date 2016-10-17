@@ -62,8 +62,9 @@
 (define-key mpeschke/global-map (kbd "i") 'mpeschke/insert-map)
 
 ;; Org-mode sub-menu
-(define-prefix-command 'mpeschke/org-map nil "[c]locking-time")
+(define-prefix-command 'mpeschke/org-map nil "[c]locking-time [l]ink")
 (define-key mpeschke/org-map (kbd "c") 'mpeschke/org-clock-map)
+(define-key mpeschke/org-map (kbd "l") 'mpeschke/org-link-map)
 
 (define-prefix-command 'mpeschke/org-clock-map nil "[i]n [o]ut [j]ump-to-current [m]enu insert-[t]able")
 (define-key mpeschke/org-clock-map (kbd "i") 'org-clock-in)
@@ -71,6 +72,11 @@
 (define-key mpeschke/org-clock-map (kbd "j") 'org-clock-jump-to-current-clock)
 (define-key mpeschke/org-clock-map (kbd "m") 'org-clock-menu)
 (define-key mpeschke/org-clock-map (kbd "t") 'org-clock-report)
+
+(define-prefix-command 'mpeschke/org-link-map nil "[s]ave [i]nsert [o]pen")
+(define-key mpeschke/org-link-map (kbd "s") 'org-store-link)
+(define-key mpeschke/org-link-map (kbd "i") 'org-insert-link-global)
+(define-key mpeschke/org-link-map (kbd "o") 'org-open-at-point-global)
 
 ;; Align sub-menu
 (define-prefix-command 'mpeschke/align-map nil "[a]lign [c]urrent [t]ext [r]egex all-[s]trings")
