@@ -66,9 +66,10 @@
 (define-key mpeschke/org-map (kbd "c") 'mpeschke/org-clock-map)
 (define-key mpeschke/org-map (kbd "l") 'mpeschke/org-link-map)
 
-(define-prefix-command 'mpeschke/org-clock-map nil "[i]n [o]ut [j]ump-to-current [m]enu insert-[t]able")
+(define-prefix-command 'mpeschke/org-clock-map nil "[i]n [o]ut [c]ancel [j]ump-to-current [m]enu insert-[t]able")
 (define-key mpeschke/org-clock-map (kbd "i") 'org-clock-in)
 (define-key mpeschke/org-clock-map (kbd "o") 'org-clock-out)
+(define-key mpeschke/org-clock-map (kbd "c") 'org-clock-cancel)
 (define-key mpeschke/org-clock-map (kbd "j") 'org-clock-jump-to-current-clock)
 (define-key mpeschke/org-clock-map (kbd "m") 'org-clock-menu)
 (define-key mpeschke/org-clock-map (kbd "t") 'org-clock-report)
