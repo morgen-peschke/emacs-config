@@ -74,18 +74,33 @@
  '(lua-indent-level 2)
  '(mumamo-background-colors nil)
  '(mumamo-chunk-coloring 0)
+ '(org-agenda-files (quote ("~/agenda.org")))
  '(org-archive-location "%s-archive::From %s")
  '(org-default-notes-file "notes")
  '(org-drill-optimal-factor-matrix (quote ((1 (2.5 . 4.0)))))
  '(org-enforce-todo-checkbox-dependencies t)
  '(org-enforce-todo-dependencies t)
+ '(org-file-apps
+   (quote
+    ((auto-mode . emacs)
+     ("\\.mm\\'" . default)
+     ("\\.x?html?\\'" . emacs)
+     ("\\.pdf\\'" . default))))
  '(org-modules
    (quote
     (org-bbdb org-bibtex org-jsinfo org-wl org-bookmark org-drill org-man)))
- '(org-todo-keyword-faces (quote (("WAIT" . org-agenda-dimmed-todo-face))))
+ '(org-todo-keyword-faces
+   (quote
+    (("TODO" . org-todo)
+     ("DOING" . org-agenda-current-time)
+     ("IN-REVIEW" . org-done)
+     ("WAIT" . org-agenda-dimmed-todo-face)
+     ("BLOCKED" . org-warning)
+     ("BROKEN" . org-warning)
+     ("DONE" . org-done))))
  '(org-todo-keywords
    (quote
-    ((sequence "TODO(d)" "WAIT(h)" "DOING(t)" "IN-REVIEW(n)" "DONE(s)"))))
+    ((sequence "TODO(1)" "DOING(2)" "IN-REVIEW(3)" "WAIT(4)" "BLOCKED(5)" "BROKEN(6)" "DONE(7)"))))
  '(package-archives
    (quote
     (("melpa" . "http://melpa.milkbox.net/packages/")
