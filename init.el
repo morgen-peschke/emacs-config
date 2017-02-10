@@ -94,13 +94,14 @@
     (("TODO" . org-todo)
      ("DOING" . org-agenda-current-time)
      ("IN-REVIEW" . org-done)
+     ("MERGED" . org-done)
      ("WAIT" . org-agenda-dimmed-todo-face)
      ("BLOCKED" . org-warning)
      ("BROKEN" . org-warning)
      ("DONE" . org-done))))
  '(org-todo-keywords
    (quote
-    ((sequence "TODO(1)" "DOING(2)" "IN-REVIEW(3)" "WAIT(4)" "BLOCKED(5)" "BROKEN(6)" "DONE(7)"))))
+    ((sequence "TODO(1)" "DOING(2)" "IN-REVIEW(3)" "MERGED(4)" "WAIT(5)" "BLOCKED(6)" "BROKEN(7)" "DONE(8)"))))
  '(package-archives
    (quote
     (("melpa" . "http://melpa.milkbox.net/packages/")
