@@ -32,7 +32,6 @@
 
 ;; add directories to load path
 (add-to-list 'load-path "~/.emacs.d/lisp")
-(load "nxhtml/elisp/autostart.el")
 
 ;; Improved automatic alignment
 (load "align-string.el")

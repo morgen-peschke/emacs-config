@@ -18,7 +18,6 @@
 (depends-on "org")
 (depends-on "package-build")
 (depends-on "pallet")
-(depends-on "rinari")
 (depends-on "ruby-compilation")
 (depends-on "s")
 (depends-on "shut-up")
@@ -39,8 +38,7 @@
 (depends-on "string-inflection")
 
 ;; Scala
-(depends-on "scala-outline-popup")
-(depends-on "scala-mode2") ; Ensime dependency
+(depends-on "scala-mode")  ; Ensime dependency
 (depends-on "sbt-mode")    ; Ensime dependency
 (depends-on "s")           ; Ensime dependency: elisp string manipulation
 (depends-on "dash")        ; Ensime dependency: elisp list API

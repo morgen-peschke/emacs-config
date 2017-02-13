@@ -72,8 +72,6 @@
  '(js-indent-level 2)
  '(load-dirs "~/.emacs.d/config-modules")
  '(lua-indent-level 2)
- '(mumamo-background-colors nil)
- '(mumamo-chunk-coloring 0)
  '(org-agenda-files (quote ("~/agenda.org")))
  '(org-archive-location "%s-archive::From %s")
  '(org-default-notes-file "notes")
@@ -108,7 +106,7 @@
      ("gnu" . "http://elpa.gnu.org/packages/"))))
  '(package-selected-packages
    (quote
-    (string-inflection yaml-mode ws-butler vlf unicode-fonts rinari rainbow-mode pallet markdown-mode lua-mode load-dir jump-char json-mode iedit highlight-indentation expand-region enh-ruby-mode csv-mode auto-complete ag)))
+    (string-inflection yaml-mode ws-butler vlf unicode-fonts rainbow-mode pallet markdown-mode lua-mode load-dir jump-char json-mode iedit highlight-indentation expand-region enh-ruby-mode csv-mode auto-complete ag)))
  '(pretty-symbol-categories (lambda relational logical nil))
  '(pretty-symbol-patterns
    (quote

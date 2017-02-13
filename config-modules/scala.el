@@ -1,4 +1,3 @@
-(require 'scala-mode2)
 (require 'ensime)
 (require 'popup)
 
