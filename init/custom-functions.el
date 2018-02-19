@@ -202,6 +202,22 @@
                              (mapconcat 'identity cmd " "))))
 
 ;;|=======================================
+;;| org-mode helpers
+;;|
+
+;; Clock back in
+;;;###autoload
+(defun mpeschke/org/clock-back-in ()
+  "clock back into the most recent heading"
+  (interactive)
+  (let (origin (current-buffer))
+    (save-excursion
+      (org-clock-goto)
+      (org-clock-in)
+      (switch-to-buffer origin))))
+
+
+;;|=======================================
 ;;| Miscellaneous
 ;;|
 
