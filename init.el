@@ -106,7 +106,7 @@
      ("gnu" . "http://elpa.gnu.org/packages/"))))
  '(package-selected-packages
    (quote
-    (string-inflection yaml-mode ws-butler vlf unicode-fonts rainbow-mode pallet markdown-mode lua-mode load-dir jump-char json-mode iedit highlight-indentation expand-region enh-ruby-mode csv-mode auto-complete ag)))
+    (groovy-mode string-inflection yaml-mode ws-butler vlf unicode-fonts rainbow-mode pallet markdown-mode lua-mode load-dir jump-char json-mode iedit highlight-indentation expand-region enh-ruby-mode csv-mode auto-complete ag)))
  '(pretty-symbol-categories (lambda relational logical nil))
  '(pretty-symbol-patterns
    (quote
